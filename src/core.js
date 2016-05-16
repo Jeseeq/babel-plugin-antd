@@ -17,11 +17,11 @@ export default function(defaultLibraryName) {
         const { libDir = 'lib', libraryName = defaultLibraryName, style } = opts;
         const path = `${libraryName}/${libDir}/${camel2Dash(methodName)}`;
         selectedMethods[methodName] = file.addImport(path, 'default');
-        if (style === true) {
-          file.addImport(`${path}/style`);
-        } else if(style === 'css') {
-          file.addImport(`${path}/style/css`);
-        }
+        //if (style === true) {
+        //  file.addImport(`${path}/style`);
+       // } else if(style === 'css') {
+        //  file.addImport(`${path}/style/css`);
+       // }
       }
       return selectedMethods[methodName];
     }
